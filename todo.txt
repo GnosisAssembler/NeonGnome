@@ -25,6 +25,7 @@ colorls
 lolcat
 
 LANGUAGES:
+(git)
 python
 ruby
 rust
