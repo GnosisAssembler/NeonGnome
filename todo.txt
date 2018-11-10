@@ -4,19 +4,20 @@ tilix
 (https://gnunn1.github.io/tilix-web/#packages)
 
 THEMES:
-custom adwaita
+custom adwaita (usr/share/themes)
 breeze_snow cursor
 la-capitaine-icon-theme
+folder-colors
 
 FONTS:
 nerd-fonts
 
-EXTENSIONS:
+EXTENSIONS: (downloaded from gnome tweaks)
 dash to dock
 flippery application menu
 places status indicator
 removable drive menu
-workspace indicator
+workspaces to dock
 
 TERMINAL SHELL:
 oh-my-zsh
