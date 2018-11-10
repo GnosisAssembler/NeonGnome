@@ -1,0 +1,30 @@
+gnome tweaks
+(https://linuxconfig.org/how-to-install-tweak-tool-on-ubuntu-18-04-bionic-beaver-linux)
+tilix
+(https://gnunn1.github.io/tilix-web/#packages)
+
+THEMES:
+custom adwaita
+breeze_snow cursor
+la-capitaine-icon-theme
+
+FONTS:
+nerd-fonts
+
+EXTENSIONS:
+dash to dock
+flippery application menu
+places status indicator
+removable drive menu
+workspace indicator
+
+TERMINAL SHELL:
+oh-my-zsh
+powerlevel9k
+colorls
+lolcat
+
+LANGUAGES:
+python
+ruby
+rust
