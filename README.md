@@ -2,6 +2,8 @@
 
 > Gnome shell, theme and terminal customization.
 
+*[Theme](#theme)
+
 First you need to install [Gnome Tweaks](https://linuxconfig.org/how-to-install-tweak-tool-on-ubuntu-18-04-bionic-beaver-linux) in order to add and configure the shell extensions easier.
 
 _For Ubuntu 18.04 Bionic Beaver_
