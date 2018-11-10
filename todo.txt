@@ -1,32 +1,7 @@
-gnome tweaks
-(https://linuxconfig.org/how-to-install-tweak-tool-on-ubuntu-18-04-bionic-beaver-linux)
-tilix
-(https://gnunn1.github.io/tilix-web/#packages)
 
-THEMES:
-custom adwaita (usr/share/themes)
-breeze_snow cursor
-la-capitaine-icon-theme
-folder-colors
-
-FONTS:
 nerd-fonts
 
-EXTENSIONS: (downloaded from gnome tweaks)
-dash to dock
-flippery application menu
-places status indicator
-removable drive menu
-workspaces to dock
-
-TERMINAL SHELL:
-oh-my-zsh
-powerlevel9k
 colorls
 lolcat
 
-LANGUAGES:
-(git)
-python
 ruby
-rust
