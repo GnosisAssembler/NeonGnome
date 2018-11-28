@@ -108,7 +108,7 @@ Configure the custom font inside Tilix.
 ![font-sample](img/font-sample.png?raw=true)
 
 ### Install terminal color theme
-Take the term-theme.json inside the term-theme folder and import it into Tilix.
+Take the *term-theme.json* inside the *term-theme folder* and import it into Tilix.
 
 ## Ruby Gems
 
