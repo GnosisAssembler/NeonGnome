@@ -51,6 +51,15 @@ Clone [La capitaine icon theme](https://github.com/keeferrourke/la-capitaine-ico
 git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
 ```
 
+__Alternative Icons: "Pop" 
+
+Install them by running:
+```shell
+sudo add-apt-repository ppa:system76/pop
+sudo apt update
+sudo apt install pop-icon-theme
+```
+
 ### Cursor
 
 Download and install [Breeze Cursor Theme](https://www.ubuntuupdates.org/package/kubuntu-ppa_backports/cosmic/main/base/breeze-cursor-theme). 
@@ -70,6 +79,9 @@ Install [Oh-my-Zsh](https://github.com/robbyrussell/oh-my-zsh).
 ```shell
 # This requires curl, so first run:
 sudo apt-get install curl
+
+# Then install zsh
+sudo apt-get install zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
@@ -93,6 +105,9 @@ In order for the command line icons to work, you need a custom font. You can dow
 Configure the custom font inside Tilix.
 
 ![font-sample](img/font-sample.png?raw=true)
+
+### Install terminal color theme
+Take the term-theme.json inside the term-theme folder and import it into Tilix.
 
 ## Ruby Gems
 
