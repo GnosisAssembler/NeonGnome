@@ -52,7 +52,7 @@ Clone [La capitaine icon theme](https://github.com/keeferrourke/la-capitaine-ico
 git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
 ```
 
-__Alternative Icons: "Pop" 
+__Alternative Icons:__ *"Pop"*
 
 Install them by running:
 ```shell
