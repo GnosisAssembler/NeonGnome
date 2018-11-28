@@ -12,6 +12,7 @@
 * [Install Oh-my-Zsh](#install-oh-my-zsh)
   * [PowerLevel9K](#powerlevel9k)
   * [Install Fonts](#install-fonts)
+  * [Install Terminal color theme](#install-terminal-color-theme)
 * [Ruby Gems](#ruby-gems)
 * [Final](#final)
 
