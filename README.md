@@ -1,6 +1,6 @@
 # Gnome-customization
 
-> Gnome shell, theme and terminal customization (robot Pop Linux) 
+> Gnome shell, theme and terminal customization (Pop Linux) 
 
 * [Terminal Emulator](#install-terminal-emulator)
 * [Gnome Tweaks](#gnome-tweaks)
@@ -44,7 +44,7 @@ From Ubuntu Software, you can search and install the below gnome extensions and 
 * Gno-menu
 * Removable drive menu
 
-_NOTE:If you use Pop.os like me, the Dash-to-Dock and Worspaces-to-dock extensions are preinstalled_
+_NOTE: If you use Pop.os like me, the Dash-to-Dock and Worspaces-to-dock extensions are preinstalled_
 
 ## Theme
 
@@ -136,7 +136,7 @@ At a minimum, SpaceVim requires git and curl to be installed. Both tools are nee
 curl -sLf https://spacevim.org/install.sh | bash
 ```
 
-Download the init.toml configuration file from this repository and add it to your home directory inside _.SpaceVim.d_(replacing the current init.toml)
+Download the init.toml configuration file from this repository and add it to your home directory inside _.SpaceVim.d_ (replacing the current init.toml)
 ```bash
 # Clone the repo, if you have not already done it.
 git clone https://github.com/pankaryp/Gnome-customization.git
