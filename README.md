@@ -1,6 +1,6 @@
 # Gnome-customization
 
-> Gnome shell, theme and terminal customization.
+> Gnome shell, theme and terminal customization (robot Pop Linux) 
 
 * [Terminal Emulator](#install-terminal-emulator)
 * [Gnome Tweaks](#gnome-tweaks)
@@ -12,6 +12,7 @@
 * [Install Oh-my-Zsh](#install-oh-my-zsh)
   * [PowerLevel9K](#powerlevel9k)
   * [Install Fonts](#install-fonts)
+* [Vim](#vim)
 * [Ruby Gems](#ruby-gems)
 * [Final](#final)
 
@@ -72,7 +73,7 @@ Download and install [Breeze Cursor Theme](https://www.ubuntuupdates.org/package
 
 _NOTE: All the above can be configured through Gnome Tweaks._
 
-![theme-sample](img/theme-sample.png?raw=true)
+![gnome-ext](img/gnome-ext.png?raw=true)
 
 ### Folder Color
 
@@ -107,7 +108,13 @@ Download the .zshc configuration file from this repository and add it to your ho
 # Clone the repo, if you have not already done it.
 git clone https://github.com/pankaryp/Gnome-customization.git
 cd zsh-config
-sudo mv .zshc /home
+sudo rm /home/.zshc && mv .zshc /home
+```
+
+Edit path with ur own username inside .zshr 5th line:
+```txt
+# Path to your oh-my-zsh installation.
+  export ZSH="/home/UR_USER_NAME/.oh-my-zsh"
 ```
 
 ### Install Fonts
@@ -116,8 +123,28 @@ In order for the command line icons to work, you need a custom font. You can dow
 
 Configure the custom font inside Tilix or Terminator.
 
-![font-sample](img/font-sample.png?raw=true)
+![terminator](img/terminator.png?raw=true)
 
+## Vim
+Install vim
+```bash
+sudo apt-get install vim
+```
+Install SpaceVim:
+At a minimum, SpaceVim requires git and curl to be installed. Both tools are needed for downloading plugins and fonts.
+```bash
+curl -sLf https://spacevim.org/install.sh | bash
+```
+
+Download the init.toml configuration file from this repository and add it to your home directory inside _.SpaceVim.d_(replacing the current init.toml)
+```bash
+# Clone the repo, if you have not already done it.
+git clone https://github.com/pankaryp/Gnome-customization.git
+cd space-vim
+sudo rm /home/.SpaceVim.d/init.toml && mv init.toml /home/.SpaceVim.d
+```
+
+![main-screen](img/main-screen.png?raw=true)
 
 ## Ruby Gems
 
@@ -136,6 +163,6 @@ gem install lolcat
 
 ## Final
 
-![final-sample](img/final-sample.png?raw=true)
+![screen](img/screen.png?raw=true)
 
 

@@ -2,31 +2,53 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/USER_NAME/.oh-my-zsh"
+  export ZSH="/home/UR_USER_NAME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+# Zsh theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# Terminal font
 POWERLEVEL9K_MODE="nerdfont-complete"
 
+# Powerlevel9k configuration
 POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX=" "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX='\uf197  '
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_devil_icon virtualenv rust_version context dir vcs )
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+	custom_alien 
+	virtualenv 
+	rust_version 
+	context 
+	dir 
+	vcs
+	aws
+)
 
-POWERLEVEL9K_VIRTUALENV_BACKGROUND="yellow"
-POWERLEVEL9K_RUST_VERSION_BACKGROUND="purple"
+# Powerlevel9k default values change
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="gold1"
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="black"
+POWERLEVEL9K_DIR_HOME_BACKGROUND="deepskyblue1"
+POWERLEVEL9K_VIRTUALENV_BACKGROUND="purple"
+POWERLEVEL9K_RUST_VERSION_BACKGROUND="darkorange"
 
-POWERLEVEL9K_CUSTOM_DEVIL_ICON="echo "
-POWERLEVEL9K_CUSTOM_DEVIL_ICON_BACKGROUND="red"
+# NERD ICONS
+# Alien
+POWERLEVEL9K_CUSTOM_ALIEN="echo -n '\ue36e'"
+POWERLEVEL9K_CUSTOM_ALIEN_FOREGROUND="white"
+POWERLEVEL9K_CUSTOM_ALIEN_BACKGROUND="orange4"
 
+# Ruby gems
 source $(dirname $(gem which colorls))/tab_complete.sh
 
+# Gem aliases
 alias ls='colorls'
 alias npml='npm list -g --depth=0 | lolcat'
 
@@ -56,7 +78,7 @@ alias npml='npm list -g --depth=0 | lolcat'
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
