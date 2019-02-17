@@ -43,7 +43,7 @@ From Ubuntu Software, you can search and install the below gnome extensions and 
 * Gno-menu
 * Removable drive menu
 
-_NOTE:If you use Pop.os like me, the Dash-to-Dock nd Worspaces-to-dock extensions are preinstalled_
+_NOTE:If you use Pop.os like me, the Dash-to-Dock and Worspaces-to-dock extensions are preinstalled_
 
 ## Theme
 
@@ -57,7 +57,7 @@ sudo mv SmoothDark /usr/share/themes
 
 ### Icons
 
-__Pop Icons__(_In Pop.os obviously pop icon theme is the default one,so you dont need to install it_)
+__Pop Icons__ (_In Pop.os obviously pop icon theme is the default one,so you dont need to install it_)
 
 Install them by running:
 ```shell
