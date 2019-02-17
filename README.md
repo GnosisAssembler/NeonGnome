@@ -20,11 +20,16 @@
 
 Add terminal emulator [Tilix](https://gnunn1.github.io/tilix-web/#packages) (old Terminix), by downloading and installing the .deb package.
 
+Alternatively you can install Terminator by running (you can easily remove the ugly red titlebar from the settings menu):
+```bash
+sudo apt-get install terminator
+```
+
 ## Gnome Tweaks
 
 First you need to install [Gnome Tweaks](https://linuxconfig.org/how-to-install-tweak-tool-on-ubuntu-18-04-bionic-beaver-linux) in order to add and configure the shell extensions easier.
 
-_For Ubuntu 18.04 Bionic Beaver_
+_First add the repo and then install:_
 ```shell
 $ sudo add-apt-repository universe
 $ sudo apt install gnome-tweak-tool
@@ -36,23 +41,24 @@ From Ubuntu Software, you can search and install the below gnome extensions and 
 
 * Dash to dock
 * Workspaces to dock
-* Flippery application menu
-* Places status indicator
+* Gno-menu
 * Removable drive menu
+
+_NOTE:If you use Pop.os like me, the Dash-to-Dock nd Worspaces-to-dock extensions are preinstalled_
 
 ## Theme
 
-Download 'CustomDarkAdwaita' from this repository and add it to */usr/share/themes*
+Download 'SmoothDark' from this repository and add it to */usr/share/themes*
+
+```bash
+git clone https://github.com/pankaryp/Gnome-customization.git
+cd Gnome-customization
+sudo mv SmoothDark /usr/share/themes
+```
 
 ### Icons
 
-Clone [La capitaine icon theme](https://github.com/keeferrourke/la-capitaine-icon-theme) and add it to *usr/share/icons*
-
-```shell
-git clone https://github.com/keeferrourke/la-capitaine-icon-theme.git
-```
-
-__Alternative Icons:__ *"Pop"*
+__Pop Icons__(_In Pop.os obviously pop icon theme is the default one,so you dont need to install it_)
 
 Install them by running:
 ```shell
@@ -98,17 +104,21 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 ```
 
 Download the .zshc configuration file from this repository and add it to your home directory (replacing the current .zshc)
+```bash
+# Clone the repo, if you have not already done it.
+git clone https://github.com/pankaryp/Gnome-customization.git
+cd zsh-config
+sudo mv .zshc /home
+```
 
 ### Install Fonts
 
 In order for the command line icons to work, you need a custom font. You can download the font from this repository and install it, or you can choose another font from here [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts). 
 
-Configure the custom font inside Tilix.
+Configure the custom font inside Tilix or Terminator.
 
 ![font-sample](img/font-sample.png?raw=true)
 
-### Install terminal color theme
-Take the *term-theme.json* inside the *term-theme folder* and import it into Tilix.
 
 ## Ruby Gems
 
