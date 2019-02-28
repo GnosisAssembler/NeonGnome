@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/UR_USER_NAME/.oh-my-zsh"
+  export ZSH="/home/samy/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -35,7 +35,16 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
 # Powerlevel9k default values change
 POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="gold1"
 POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="black"
+
 POWERLEVEL9K_DIR_HOME_BACKGROUND="deepskyblue1"
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND="deepskyblue3"
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND="deepskyblue3"
+POWERLEVEL9K_DIR_ETC_BACKGROUND="cyan2"
+
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND="seagreen2"
+POWERLEVEL9K_VCS_UNTRACTED_BACKGROUND="maroon"
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND="green1"
+
 POWERLEVEL9K_VIRTUALENV_BACKGROUND="purple"
 POWERLEVEL9K_RUST_VERSION_BACKGROUND="darkorange"
 

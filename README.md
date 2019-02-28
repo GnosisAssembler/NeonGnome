@@ -117,6 +117,13 @@ Edit path with ur own username inside .zshr 5th line:
   export ZSH="/home/UR_USER_NAME/.oh-my-zsh"
 ```
 
+_NOTE: If you want to see the available colors inside your terminal just run:_
+```bash
+getColorCode background
+#or
+getColorCode foreground
+```
+
 ### Install Fonts
 
 In order for the command line icons to work, you need a custom font. You can download the font from this repository and install it, or you can choose another font from here [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts). 
