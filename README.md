@@ -15,6 +15,7 @@
 * [Vim](#vim)
 * [Ruby Gems](#ruby-gems)
 * [Final](#final)
+* [Languages Support](#languages-support)
 
 ## Install Terminal Emulator
 
@@ -40,6 +41,8 @@ $ sudo apt install gnome-tweak-tool
 From Ubuntu Software, you can search and install the below gnome extensions and then customize the settings of each extension as you like with Gnome Tweaks.
 
 * Dash to dock
+* Dash to panel
+* Hide top bar
 * Workspaces to dock
 * Gno-menu
 * Removable drive menu
@@ -171,6 +174,121 @@ gem install lolcat
 ## Final
 
 ![screen](img/screen.png?raw=true)
+
+## Languages Support
+
+### Java (OpenJDK)
+```sh
+# Execute the following command to install JRE:
+sudo apt install default-jre
+
+# Execute the following command to install JDK:
+sudo apt install default-jdk
+
+```
+
+### Node.js (with nvm)
+```sh
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+# Install node js stable version (it may differ)
+nvm install 10.16.0
+```
+
+### Go
+```sh
+# Apply latest updates
+sudo apt-get update
+sudo apt-get upgrade
+
+# Download the latest Go language binary archive file
+wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
+
+# Extract files in desired location (/usr/local)
+sudo tar -xvf go1.12.7.linux-amd64.tar.gz
+sudo mv go /usr/local
+```
+
+### Rust (using rustup)
+```sh
+# Run this script and follow onscreen instructions
+curl https://sh.rustup.rs -sSf | sh
+```
+
+### Elixir
+```sh
+# Add Erlang Solutions repo
+wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb
+
+sudo apt-get update
+
+# Install the Erlang/OTP platform and all of its applications
+sudo apt-get install esl-erlang
+
+#Install Elixir
+sudo apt-get install elixir
+```
+
+### F#
+```sh
+# Add Mono repository to your package manager
+sudo apt install gnupg ca-certificates
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo apt update
+
+# Install Mono
+sudo apt install mono-devel
+sudo apt-get update
+
+# Install F#
+sudo apt-get install fsharp
+```
+
+### Dart
+```sh
+# Enable HTTPS for apt
+sudo apt-get install apt-transport-https
+
+# Get the Google linux package key
+sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
+
+# Set the location of the stable repository
+sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
+sudo apt-get update
+
+# Install Dart SDK
+sudo apt-get install dart
+```
+
+### Lua
+```sh
+# Install development tools
+sudo apt install build-essential libreadline-dev
+
+#Then to build and install Lua, run the following commands to download the package tar ball, extract, build and install it
+curl -R -O http://www.lua.org/ftp/lua-5.3.4.tar.gz
+tar -zxf lua-5.3.4.tar.gz
+cd lua-5.3.4
+make linux test
+sudo make install
+
+# Download and unpack the LuaRocks tarball using following commands. (We use version 3.1.3 here)
+wget https://luarocks.org/releases/luarocks-3.1.3.tar.gz
+tar zxpf luarocks-3.1.3.tar.gz
+cd luarocks-3.1.3
+
+# Run
+./configure. 
+#this will attempt to detect your installation of Lua
+
+# Run
+make build
+
+# Run
+sudo make install
+```
 
 ## License
 
