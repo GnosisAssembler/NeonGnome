@@ -129,7 +129,7 @@ getColorCode foreground
 
 ### Install Fonts
 
-In order for the command line icons to work, you need a custom font. You can download the font from this repository and install it, or you can choose another font from here [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts). 
+In order for the command line icons to work, you need a custom font. You can download the font from this repository and install it, or you can choose another font from here. [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts). 
 
 Configure the custom font inside Tilix or Terminator.
 
