@@ -173,7 +173,7 @@ gem install lolcat
 
 ## Final
 
-![screen](img/screen.png?raw=true)
+![final](img/final.png?raw=true)
 
 ## Languages Support
 
