@@ -154,8 +154,6 @@ cd space-vim
 sudo rm /home/.SpaceVim.d/init.toml && mv init.toml /home/.SpaceVim.d
 ```
 
-![main-screen](img/main-screen.png?raw=true)
-
 ## Ruby Gems
 
 Add Colorls and Lolcat for extra awesomeness (requires Ruby)
