@@ -1,0 +1,45 @@
+# Main Colors
+unrecognized_file: magenta
+recognized_file: deeppink
+executable_file: mediumspringgreen
+dir: cyan
+
+# Link
+dead_link: red
+link: cyan
+
+# special files
+socket: deeppink
+blockdev: deeppink
+chardev: deeppink
+
+# Access Modes
+write: mediumspringgreen
+read: cyan
+exec: deeppink
+no_access: indianred
+
+# Age
+day_old: seagreen
+hour_old: mediumspringgreen
+no_modifier: darkseagreen
+
+# File Size
+file_large: deeppink
+file_medium: magenta
+file_small: darkmagenta
+
+# Random
+report: white
+user: magenta
+tree: cyan
+empty: yellow
+error: red
+normal: cyan
+
+# Git
+addition: chartreuse
+modification: darkkhaki
+deletion: darkred
+untracked: darkorange
+unchanged: forestgreen

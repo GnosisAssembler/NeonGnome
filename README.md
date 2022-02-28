@@ -1,79 +1,129 @@
-# Gnome-customization
-
+# NeonGnome
 ![project customization](https://img.shields.io/badge/project-customization-brightgreen.svg?style=flat-square)
 
-> Gnome shell, theme and terminal customization (Pop Linux) 
+> Gnome shell, theme and terminal customization (on top of Pop!OS) 
 
-- [Gnome-customization](#gnome-customization)
+- [NeonGnome](#neongnome)
   - [Install Terminal Emulator](#install-terminal-emulator)
+    - [Tilix](#tilix)
+    - [Terminator](#terminator)
+      - [Install Fonts](#install-fonts)
+      - [Terminal Color Palette](#terminal-color-palette)
+      - [Other Settings](#other-settings)
   - [Gnome Tweaks](#gnome-tweaks)
     - [Gnome Extensions](#gnome-extensions)
   - [Theme](#theme)
+    - [SmoothDark](#smoothdark)
+    - [Dracula](#dracula)
     - [Icons](#icons)
+      - [Pop Icons](#pop-icons)
     - [Cursor](#cursor)
     - [Folder Color](#folder-color)
   - [Install Oh-my-Zsh](#install-oh-my-zsh)
-    - [PowerLevel9K](#powerlevel9k)
-    - [Install Fonts](#install-fonts)
+    - [Spaceship Prompt](#spaceship-prompt)
   - [Vim](#vim)
   - [Ruby Gems](#ruby-gems)
   - [Final](#final)
   - [Languages Support](#languages-support)
-    - [Java (OpenJDK)](#java-openjdk)
     - [Node.js (with nvm)](#nodejs-with-nvm)
-    - [Go](#go)
     - [Rust (using rustup)](#rust-using-rustup)
+    - [Go](#go)
     - [Elixir](#elixir)
-    - [F](#f)
-    - [Dart](#dart)
+    - [Java (OpenJDK)](#java-openjdk)
     - [Lua](#lua)
+    - [Crystal](#crystal)
+    - [Haskell](#haskell)
+    - [Elm](#elm)
   - [License](#license)
 
 ## Install Terminal Emulator
 
-Add terminal emulator [Tilix](https://gnunn1.github.io/tilix-web/#packages) (old Terminix), by downloading and installing the .deb package.
+### Tilix
 
-Alternatively you can install Terminator by running (you can easily remove the ugly red titlebar from the settings menu):
+Add terminal emulator [Tilix](https://gnunn1.github.io/tilix-web/#packages) (old Terminix), by downloading and installing the package according to your distro.
+
+### Terminator
+
+Alternatively you can install **Terminator** by running: 
 ```bash
 sudo apt-get install terminator
 ```
 
+_(you can easily remove the ugly red titlebar from preferences/profiles, by unchecking the "show titlebar" option)_
+
+![titlebar](img/1.titlebar.png?raw=true)
+
+#### Install Fonts
+
+In order for the command line icons to work, you need a custom font. You can download **Hack** font from this repository (inside fonts folder) and install it, or you can choose another font from here. [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts). 
+
+Configure the custom font inside Tilix or Terminator.
+
+![font](img/2.font.png?raw=true)
+
+#### Terminal Color Palette
+
+Change the colors of your terminal profile. You can find the hex codes below.
+
+![colors](img/4.colors.png?raw=true)
+
+![palette](img/5.palette.png?raw=true)
+
+#### Other Settings
+
+You can change other settings too, like the transparency of the window
+
+![trans](img/7.trans.png?raw=true)
+
+
 ## Gnome Tweaks
 
-First you need to install [Gnome Tweaks](https://linuxconfig.org/how-to-install-tweak-tool-on-ubuntu-18-04-bionic-beaver-linux) in order to add and configure the shell extensions easier.
+First you need to install [Gnome Tweaks]() in order to add and configure the shell extensions.
 
-_First add the repo and then install:_
 ```shell
-$ sudo add-apt-repository universe
-$ sudo apt install gnome-tweak-tool
+sudo apt-get install gnome-tweaks
 ```
 
 ### Gnome Extensions
 
-From Ubuntu Software, you can search and install the below gnome extensions and then customize the settings of each extension as you like with Gnome Tweaks.
+From **POP!OS Store**, you can install the **Extension Manager** in order to install some gnome extensions. 
 
-* Dash to dock
-* Dash to panel
+_If you are not using POP!0S you don't need to install Extension Manager as there is a special tab in Gnome Tweaks to search and install gnome extensions._
+
+Install the below gnome extensions and then customize the settings as you like with Gnome Tweaks or Extension Manager.
+
 * Hide top bar
-* Workspaces to dock
-* Gno-menu
 * Removable drive menu
+* User Themes
 
-_NOTE: If you use Pop.os like me, the Dash-to-Dock and Worspaces-to-dock extensions are preinstalled_
+![extensions](img/3.extensions.png?raw=true)
 
 ## Theme
 
-Download 'SmoothDark' from this repository and add it to */usr/share/themes*
+### SmoothDark
+Download **SmoothDark** from this repository and add it to `/usr/share/themes`
 
 ```bash
-git clone https://github.com/pankaryp/Gnome-customization.git
-cd Gnome-customization
+git clone https://github.com/pankaryp/NeonGnome.git
+cd NeonGnome
 sudo mv SmoothDark /usr/share/themes
+```
+
+### Dracula
+
+Download using the GitHub .zip download option and extract the .zip file to the themes directory i.e. `/usr/share/themes/` or `~/.themes/` (create it if necessary). [Dracula GTK Theme](https://draculatheme.com/gtk). 
+
+To activate the theme in Gnome, run the following commands in Terminal:
+```shell
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
 ```
 
 ### Icons
 
-__Pop Icons__ (_In Pop.os obviously pop icon theme is the default one,so you dont need to install it_)
+#### Pop Icons
+
+(_In Pop.os obviously pop icon theme is the default one,so you dont need to install it_)
 
 Install them by running:
 ```shell
@@ -86,9 +136,16 @@ sudo apt install pop-icon-theme
 
 Download and install [Breeze Cursor Theme](https://www.ubuntuupdates.org/package/kubuntu-ppa_backports/cosmic/main/base/breeze-cursor-theme). 
 
+or via terminal
+
+```shell
+sudo apt-get update -y
+sudo apt-get install -y breeze-cursor-theme
+```
+
 _NOTE: All the above can be configured through Gnome Tweaks._
 
-![gnome-ext](img/gnome-ext.png?raw=true)
+![6.tweaks](img/6.tweaks.png?raw=true)
 
 ### Folder Color
 
@@ -108,102 +165,113 @@ sudo apt-get install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-### PowerLevel9K
+There are some useful aliases inside `.zshrc` as well. You can check them out.
 
-Oh-my-Zsh theme:
+### Spaceship Prompt
 
-Clone [Powerlevel9K](https://github.com/bhilburn/powerlevel9k) into .oh-my-zsh/custom/themes.
+Clone this repo [SpaceShip](https://github.com/spaceship-prompt/spaceship-prompt)
 
 ```shell
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ```
 
-Download the .zshc configuration file from this repository and add it to your home directory (replacing the current .zshc)
+Symlink `spaceship.zsh-theme` to your oh-my-zsh custom themes directory:
+
+```shell
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+```
+
+Set `ZSH_THEME="spaceship"` in your `.zshrc`.
+
+
+Download the `.zshrc` configuration file from this repository and add it to your home directory (replacing the current .zshrc)
+
 ```bash
 # Clone the repo, if you have not already done it.
-git clone https://github.com/pankaryp/Gnome-customization.git
+git clone https://github.com/pankaryp/NeonGnome.git
+cd NeonGnome
 cd zsh-config
-sudo rm /home/.zshc && mv .zshc /home
+sudo rm /home/.zshrc && mv .zshrc /home
 ```
 
-Edit path with ur own username inside .zshr 5th line:
-```txt
-# Path to your oh-my-zsh installation.
-  export ZSH="/home/UR_USER_NAME/.oh-my-zsh"
-```
+Spacechip prompt has tones of features like:
 
-_NOTE: If you want to see the available colors inside your terminal just run:_
-```bash
-getColorCode background
-#or
-getColorCode foreground
-```
 
-### Install Fonts
+  - Clever hostname and username displaying
+  - Current Git branch and rich repo status
+  - Indicator for jobs in the background
+  - Current Versions for a lot of supported programming languages
 
-In order for the command line icons to work, you need a custom font. You can download the font from this repository and install it, or you can choose another font from here. [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts). 
-
-Configure the custom font inside Tilix or Terminator.
-
-![terminator](img/terminator.png?raw=true)
+![8.prompt](img/8.prompt.png?raw=true)
 
 ## Vim
+
 Install vim
 ```bash
 sudo apt-get install vim
 ```
 Install SpaceVim:
-At a minimum, SpaceVim requires git and curl to be installed. Both tools are needed for downloading plugins and fonts.
+At a minimum, SpaceVim requires **git** and **curl** to be installed. Both tools are needed for downloading plugins and fonts.
 ```bash
 curl -sLf https://spacevim.org/install.sh | bash
 ```
 
-Download the init.toml configuration file from this repository and add it to your home directory inside _.SpaceVim.d_ (replacing the current init.toml)
+Download the `init.toml` configuration file from this repository and add it to your home directory inside `.SpaceVim.d` (replacing the current `init.toml`)
+
 ```bash
 # Clone the repo, if you have not already done it.
-git clone https://github.com/pankaryp/Gnome-customization.git
+git clone https://github.com/pankaryp/NeonGnome.git
+cd NeonGnome
 cd space-vim
 sudo rm /home/.SpaceVim.d/init.toml && mv init.toml /home/.SpaceVim.d
 ```
 
 ## Ruby Gems
 
-Add Colorls and Lolcat for extra awesomeness (requires Ruby)
+Add **Colorls** and **Lolcat** for extra awesomeness (requires Ruby)
 
 ```shell
 # Install ruby
 sudo apt-get install ruby-full
 
 # Add colorls gem
-gem install colorls
+sudo gem install colorls
 
 # Add lolcat gem
-gem install lolcat
+sudo gem install lolcat
+```
+
+Customize **colorls** theme:
+
+Replace the contents of `dark_colors.yaml` file inside `$(dirname $(gem which colorls))/yaml` with the contents of `dark_colors.yaml` file inside the `colorls-theme` folder. 
+
+```shell
+git clone https://github.com/pankaryp/NeonGnome.git
+cd NeonGnome
+cd colorls-theme
+sudo mv dark_colors.yaml $(dirname $(gem which colorls))/yaml
 ```
 
 ## Final
 
-![final](img/final.png?raw=true)
+![final](img/10.final.png?raw=true)
 
 ## Languages Support
-
-### Java (OpenJDK)
-```sh
-# Execute the following command to install JRE:
-sudo apt install default-jre
-
-# Execute the following command to install JDK:
-sudo apt install default-jdk
-
-```
 
 ### Node.js (with nvm)
 ```sh
 # Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # Install node js stable version (it may differ)
-nvm install 10.16.0
+nvm install 17.3.1
+nvm use 17.3.1
+```
+
+### Rust (using rustup)
+```sh
+# Run this script and follow onscreen instructions
+curl https://sh.rustup.rs -sSf | sh
 ```
 
 ### Go
@@ -213,17 +281,11 @@ sudo apt-get update
 sudo apt-get upgrade
 
 # Download the latest Go language binary archive file
-wget https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz
 
 # Extract files in desired location (/usr/local)
-sudo tar -xvf go1.12.7.linux-amd64.tar.gz
+sudo tar -xvf go1.17.7.linux-amd64.tar.gz
 sudo mv go /usr/local
-```
-
-### Rust (using rustup)
-```sh
-# Run this script and follow onscreen instructions
-curl https://sh.rustup.rs -sSf | sh
 ```
 
 ### Elixir
@@ -240,36 +302,14 @@ sudo apt-get install esl-erlang
 sudo apt-get install elixir
 ```
 
-### F#
+### Java (OpenJDK)
 ```sh
-# Add Mono repository to your package manager
-sudo apt install gnupg ca-certificates
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
-sudo apt update
+# Execute the following command to install JRE:
+sudo apt install default-jre
 
-# Install Mono
-sudo apt install mono-devel
-sudo apt-get update
+# Execute the following command to install JDK:
+sudo apt install default-jdk
 
-# Install F#
-sudo apt-get install fsharp
-```
-
-### Dart
-```sh
-# Enable HTTPS for apt
-sudo apt-get install apt-transport-https
-
-# Get the Google linux package key
-sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
-
-# Set the location of the stable repository
-sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
-sudo apt-get update
-
-# Install Dart SDK
-sudo apt-get install dart
 ```
 
 ### Lua
@@ -278,16 +318,16 @@ sudo apt-get install dart
 sudo apt install build-essential libreadline-dev
 
 #Then to build and install Lua, run the following commands to download the package tar ball, extract, build and install it
-curl -R -O http://www.lua.org/ftp/lua-5.3.4.tar.gz
-tar -zxf lua-5.3.4.tar.gz
-cd lua-5.3.4
+curl -R -O http://www.lua.org/ftp/lua-5.4.4.tar.gz
+tar -zxf lua-5.4.4.tar.gz
+cd lua-5.4.4
 make linux test
 sudo make install
 
 # Download and unpack the LuaRocks tarball using following commands. (We use version 3.1.3 here)
-wget https://luarocks.org/releases/luarocks-3.1.3.tar.gz
-tar zxpf luarocks-3.1.3.tar.gz
-cd luarocks-3.1.3
+wget https://luarocks.org/releases/luarocks-3.8.0.tar.gz
+tar zxpf luarocks-3.8.0.tar.gz
+cd luarocks-3.8.0
 
 # Run
 ./configure. 
@@ -298,6 +338,35 @@ make build
 
 # Run
 sudo make install
+```
+
+### Crystal
+
+```shell
+# To install latest stable Crystal release from the official Crystal repository hosted on the Open Build Service run:
+curl -fsSL https://crystal-lang.org/install.sh | sudo bash
+```
+
+### Haskell
+
+```shell
+sudo apt-get install haskell-platform
+```
+
+### Elm
+
+```shell
+# Download the 0.19.1 binary for Linux.
+curl -L -o elm.gz https://github.com/elm/compiler/releases/download/0.19.1/binary-for-linux-64-bit.gz
+
+# Decompresses it, replacing `elm.gz` with `elm`
+gunzip elm.gz
+
+# Mark this file as executable
+chmod +x elm
+
+# Move the `elm` binary to one of the directories listed in your `PATH` environment variable
+sudo mv elm /usr/local/bin/
 ```
 
 ## License
