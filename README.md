@@ -1,7 +1,7 @@
 # NeonGnome
 ![project customization](https://img.shields.io/badge/project-customization-brightgreen.svg?style=flat-square)
 
-> Gnome shell, theme and terminal customization (on top of Pop!OS).
+> Gnome shell, theme and terminal customization (on top of Pop!OS)
 
 - [NeonGnome](#neongnome)
   - [Install Terminal Emulator](#install-terminal-emulator)
